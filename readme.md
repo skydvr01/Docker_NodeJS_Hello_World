@@ -32,7 +32,7 @@ Step 7 -- Run the docker image you just created
 ```
 docker container run --publish 8090:8000 --detach test:1.0
 ```
-* "publish 8090:8000" -- This tells docker to forward traffic incoming on the host’s port 8090 (your computer), to the container’s port 8080 (containers have their own private set of ports, so if we want to reach one from the network, we have to forward traffic to it in this way; otherwise, firewall rules will prevent all network traffic from reaching your container, as a default security posture).
+* "publish 8090:8000" -- This tells docker to forward traffic incoming on the host’s port 8090 (your computer), to the container’s port 8000 (containers have their own private set of ports, so if we want to reach one from the network, we have to forward traffic to it in this way; otherwise, firewall rules will prevent all network traffic from reaching your container, as a default security posture).
 * "detach" --Tells Docker to run this container in the background so that you don't have to open a new terminal window
 Step 8 -- Type "localhost:8090" into a new browser window and you should see <show image>. Congrats! You have just dockerized a webpage and served it up via NodeJS!
 
