@@ -34,15 +34,24 @@ docker container run --publish 8090:8000 --detach test:1.0
 ```
 * "publish 8090:8000" -- This tells docker to forward traffic incoming on the host’s port 8090 (your computer), to the container’s port 8000 (containers have their own private set of ports, so if we want to reach one from the network, we have to forward traffic to it in this way; otherwise, firewall rules will prevent all network traffic from reaching your container, as a default security posture).
 * "detach" --Tells Docker to run this container in the background so that you don't have to open a new terminal window
-Step 8 -- Type "localhost:8090" into a new browser window and you should see <show image>. Congrats! You have just dockerized a webpage and served it up via NodeJS!
+Step 8 -- Type "localhost:8090" into a new browser window and you should see [this](https://drive.google.com/file/d/14t0eEVYtIQVjNQ90StxgV-cC_DAqfBey/view?usp=sharing). Congrats! You have just dockerized a webpage and served it up via NodeJS!
+
+Bonus Points -- Type the following command to validate via the command line that your docker image is up and running without leaving the terminal. Your output should look like [this](https://drive.google.com/file/d/1BRLBm2D0MlPs3AWSyEK5kW--nZWOlktI/view?usp=sharing).
+```
+curl http://localhost:8090/
+```
 
 ## Good to know Docker Commands
 
-List all running docker containers 
+List all running docker containers. Output will be similar to [this]().
 ```
 docker ps
 ```
-Kill a specfic container 
+Kill a specfic container. Output will be similar to [this]().
 ```
 docker kill <containter ID>
+```
+List all images currently on your local machine. Output will be similar to [this](https://drive.google.com/file/d/1IfIiM2-WpjfYzUFH9NJV1ljBK-crwcu0/view?usp=sharing). Docker [documentation link](https://docs.docker.com/v17.12/edge/engine/reference/commandline/image_ls/). Relevant [stackoverflow link](https://stackoverflow.com/questions/30543409/how-to-check-if-a-docker-image-with-a-specific-tag-exist-locally)
+```
+docker images
 ```
